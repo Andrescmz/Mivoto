@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI VOTO EDUCATIVO</title>
+    <link rel="stylesheet" th:href="@{/CSS/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/CSS/Style.CSS}">
+    <link rel="icon" th:href="@{/img/logo.ico}">
+</head>
+<body>
+<header class="text-center bg-dark text-light py-4">
+    <h1>Inicio</h1>
+    <h3>MI VOTO EDUCATIVO</h3>
+</header>
+
+<nav class="bg-light py-2 text-center">
+    <a th:href="@{/registrarse}">Registrarse</a>
+    <a th:href="@{/login}">Iniciar sesión</a>
+    <a th:href="@{/usuarios/candidato}">Candidatos</a>
+    <form th:action="@{/login_usuario_be}" method="POST" class="search-form d-inline-block">
+        <input type="text" name="search" placeholder="Código de voto..." class="form-control d-inline-block w-auto">
+        <button type="submit" class="btn btn-primary">Iniciar</button>
+    </form>
+</nav>
+
+<div class="card text-bg-dark">
+    <img th:src="@{/IMG/vote.jpeg}" class="card-img" alt="Voto">
+    <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+        <h5 class="card-title fs-1 text-bg-dark">Sistema de Votaciones Online</h5>
+        <p class="card-text fs-4 text-dark">Seguro · Eficiente · De confianza · Rápido.</p>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <a th:href="@{/voto}" class="btn btn-primary">Emitir Voto</a>
+        </div>
+    </div>
+</div>
+
+<!-- Sección de propuestas de los candidatos -->
+<div class="container mt-4">
+    <h2 class="text-center">Propuestas de los Candidatos</h2>
+    <div class="row">
+        <div class="col-md-4" th:each="candidato : ${candidatos}">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title text-center" th:text="${candidato.nombre}"></h5>
+                    <p class="card-text" th:text="${candidato.propuesta}"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-secondary text-light text-center py-4 mt-4">
+    <h5 class="fs-2">Contacto</h5>
+    <p>Si tiene alguna sugerencia sobre nuestro sistema de votación, agradeceremos cualquier comentario.</p>
+    <a th:href="@{/static/Errores/error404}" class="btn btn-primary">Contacto</a>
+</footer>
+</body>
+</html>
+
+

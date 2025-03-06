@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Voto Educativo - Usuario Votante</title>
+    <link rel="stylesheet" href="../../../../../../public/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="iconos/css/all.min.css">
+    <link rel="stylesheet" href="../../../../../../public/CSS/style.css">
+    <style>
+        /* Estilos personalizados */
+        .navbar-brand img {
+            height: 50px; /* Ajusta la altura de la imagen del logo */
+        }
+        .navbar-nav ul {
+            list-style: none; /* Elimina los estilos de lista de la barra de navegación */
+            padding-left: 0; /* Elimina el relleno izquierdo de la lista de la barra de navegación */
+        }
+        .navbar-nav ul li {
+            margin-bottom: 10px; /* Añade un espacio entre cada elemento de la lista */
+        }
+        .modal-dialog {
+            max-width: 300px; /* Establece el ancho máximo del diálogo modal */
+        }
+        .bg-darkgreen {
+            background-color: #006400; /* Verde oscuro */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg bg-darkgreen">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../../../../../../public/IMG/logo.ico" alt="Logo"> <!-- Agrega una imagen para el logo -->
+                <span class="navbar-brand-text">Mi Voto Educativo</span> <!-- Agrega un texto para el logo -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../home.html"><i class="fa-solid fa-play"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Menú lateral -->
+            <div class="col-md-3 bg-secondary">
+                <div class="p-3">
+                    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src="../../../../../../public/IMG/icono%20usuario.png" alt="perfil" class="rounded-circle" width="170"> <!-- Ajusta la imagen del perfil -->
+                    </button>
+                    <div class="navbar-nav">
+                        <ul>
+                            <h5 class="text-light">Opciones de Usuario</h5>
+                            <li><a class="nav-link" href="#"><i class="fa-solid fa-vote-yea"></i> Votar</a></li>
+                            <li><a class="nav-link" href="#"><i class="fa-solid fa-chart-pie"></i> Ver Resultados</a></li>
+                            <li><a class="nav-link" href="#"><i class="fa-solid fa-user"></i> Mi Perfil</a></li>
+                            <li><a class="nav-link" href="#">Configuración</a></li>
+                            <li><a class="nav-link" href="#">Ayuda</a></li>
+                            <li><a class="nav-link" href="#">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Contenido principal -->
+            <div class="col-md-9">
+                <!-- Aquí va el contenido principal -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Diálogo modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Perfil</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Contenido del modal -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
